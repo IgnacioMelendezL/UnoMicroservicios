@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Thymeleaf Hello World</title>
+</head>
+<body>
+
+	<h1 id=nombre></h1>
+	
+	<h2 th:text="'Turno: ' + ${turno}"></h2>
+	<h2 th:text="'Carta: ' + ${carta}"></h2>
+<!-- 	<h1 th:text="'Thymeleaf ' + ${nombre} + ' App'"></h1> -->
+	
+	<h2 th:text="'Mano ' + ${mano}"></h2>
+	
+	<h3>Carta</h3>
+    <form action="Registrar" method="post">
+        Id: <input type="number" name="id"><br>
+        Nombre: <input type="text" name="usuario"><br>
+        Codigo: <input type="password" name="clave"><br>
+        <input type="submit" value="Enviar">
+    </form>
+    
+    <script> window.getElementById("nombre").innerHtml = sessionStorage.getItem('nombre');</script>
+</body>
+</html>
